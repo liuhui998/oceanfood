@@ -269,7 +269,6 @@ GEM
     mono_logger (1.1.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
-    mysql2 (0.3.16)
     nested_form (0.3.2)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -283,6 +282,7 @@ GEM
       activesupport (>= 3.0, < 5.0)
     paranoia (2.0.2)
       activerecord (~> 4.0)
+    pg (0.17.1)
     phonelib (0.3.2)
     polyglot (0.3.5)
     powder (0.2.1)
@@ -323,6 +323,9 @@ GEM
       rails (>= 4.0)
     rails-settings-cached (0.3.1)
       rails (>= 4.0.0.beta1)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
     rails_admin (0.6.2)
       builder (~> 3.1)
       coffee-rails (~> 4.0)
@@ -337,6 +340,8 @@ GEM
       remotipart (~> 1.0)
       safe_yaml (~> 1.0)
       sass-rails (~> 4.0)
+    rails_serve_static_assets (0.0.2)
+    rails_stdout_logging (0.0.3)
     railties (4.0.2)
       actionpack (= 4.0.2)
       activesupport (= 4.0.2)
@@ -511,10 +516,10 @@ DEPENDENCIES
   less-rails
   magic_encoding
   mini_magick
-  mysql2
   newrelic_rpm
   paper_trail (>= 3.0.0.rc2)
   paranoia (~> 2.0)
+  pg
   phonelib
   powder
   pry-nav
@@ -523,6 +528,7 @@ DEPENDENCIES
   rails (= 4.0.2)
   rails-i18n (~> 4.0.0)
   rails-settings-cached (= 0.3.1)
+  rails_12factor
   rails_admin
   redis-objects
   resque
