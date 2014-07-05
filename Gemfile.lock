@@ -13,7 +13,7 @@ GIT
     yaml_db (0.2.3)
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
