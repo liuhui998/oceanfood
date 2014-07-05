@@ -40,3 +40,5 @@ faye_server/tmp
 faye_server/log
 
 app/api/twitter.rb
+
+config/heroku_env.rb
