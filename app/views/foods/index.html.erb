@@ -23,7 +23,9 @@
     <tbody>
       <%= content_tag_for(:tr, @foods) do |food| %>
             <td>
-			  <%= image_tag food.image.thumb.url %>
+			  <%= link_to food do %>
+				<%= image_tag food.image.thumb.url %>
+			  <% end %>
 			</td>
             <td><%= food.name %></td>
             <td><%= food.price %></td>
