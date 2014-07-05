@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to foods_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_food_path(@food), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show food</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @food.name %></dd>
+
+  <dt>Price:</dt>
+  <dd><%= @food.price %></dd>
+
+  <dt>Memo:</dt>
+  <dd><%= @food.memo %></dd>
+
+  <dt>Image:</dt>
+  <dd><%= @food.image %></dd>
+
+</dl>
