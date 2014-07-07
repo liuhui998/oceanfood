@@ -85,6 +85,12 @@ RVM 是在 Mac 下使用的比较多的一个工具：
 
 因这个项目使用的是 Rails4.0.2, 所以我们创建这么一个 Gemset, 来管理相关的依赖
 
+## 把项目代码抓下来
+
+	git clone https://github.com/liuhui998/oceanfood.git
+	
+一定要抓下来，后面要用到里面的东东
+
 ## 安装所需要的 gems
 
 在命令里进入 oceanfood 的目录，执行下面的命令：
@@ -113,11 +119,83 @@ RVM 是在 Mac 下使用的比较多的一个工具：
 	
 Good Luck!
 
-* System dependencies
+## 安装 Heroku Toolbelt
 
-* Configuration
+到下面的网址下载最新的 Heroku Toolbelt, 在部署时会用到
 
-* Database creation
+	[https://toolbelt.heroku.com/](https://toolbelt.heroku.com/)
+	
+# 需要申请的帐号
+
+## Amazon Free Tier
+
+每个人都需要申一个 amazon free 帐号（中间会提示绑信用卡，它会暂扣 $1, 不过后面会还给你）
+
+    [http://aws.amazon.com/cn/free/](http://aws.amazon.com/cn/free/)
+
+这样大家可以在一年内免费使用 5G 空间的 s3 和 一台虚拟机（EC2）
+
+## Github 帐号
+
+每个人需要用个人邮箱申请一个 github, 方便大家提交作业
+
+	[https://github.com](https://github.com)
+
+大家记得一定不要把密码、密钥等信息存到 Git 里，有不少公司搞过这样的乌龙：
+
+	[http://www.pchome.com/content-57951.html](http://www.pchome.com/content-57951.html)
+
+有时间的同学可以多看一下 [Try Git](http://www.codeschool.com/courses/try-git)
+
+## Heroku 帐号
+
+Heroku 是一个 SAAS 平台，你只要执行 
+
+	git push heroku master 
+
+就可以快速的把应用部署到公网上
+
+它的服务是收费的，但是它会给你一定数目的免费项目
+
+每个人需要用个人邮箱申请一个 heroku	
+
+[http://heroku.com](http://heroku.com)
+
+# 部署配置相关
+
+## 生成 S3 的信息
+
+### 创建 bucket
+
+直接看 Amazon 文档： [http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html)
+	
+### access_key & secret_key
+
+还是看文档：[http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html)
+	
+## 使用 heroku 部署
+
+使用 heroku 创建一个新的 APP, APPNAME 是可以选的，不写的话，系统会给你自动生成一个名字
+
+	heroku create [APPNAME]
+	
+把代码推到 heroku 上，第一次推时要加 --set-upstream
+
+	git push --set-upstream heroku master
+	
+在 heroku 上执行数据库  migrate （迁移）操作
+
+	heroku run rake db:migrate
+
+把：'AWS_ACCESS_KEY_ID' ,'AWS_SECRET_ACCESS_KEY'  替换成你从 AWS 拿到的值：
+
+	heroku config:set S3_KEY='AWS_ACCESS_KEY_ID'
+	
+	heroku config:set S3_SECRET='AWS_SECRET_ACCESS_KEY'
+
+好了，现在打你的 App 看一下：
+
+	heroku open
 
 * Database initialization
 
