@@ -121,7 +121,11 @@ Good Luck!
 
 ## 安装 Heroku Toolbelt
 
-到下面的网址下载最新的 [Heroku Toolbelt](https://toolbelt.heroku.com/), 在部署时会用到
+可通过Homebrew安装：
+
+	brew install heroku-toolbelt
+
+或到下面的网址下载最新的 [Heroku Toolbelt](https://toolbelt.heroku.com/), 在部署时会用到
 
 # 需要申请的帐号
 
