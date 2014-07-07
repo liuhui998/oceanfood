@@ -121,35 +121,31 @@ Good Luck!
 
 ## 安装 Heroku Toolbelt
 
-到下面的网址下载最新的 Heroku Toolbelt, 在部署时会用到
+到下面的网址下载最新的 [Heroku Toolbelt](https://toolbelt.heroku.com/), 在部署时会用到
 
-	[https://toolbelt.heroku.com/](https://toolbelt.heroku.com/)
-	
 # 需要申请的帐号
 
 ## Amazon Free Tier
 
-每个人都需要申一个 amazon free 帐号（中间会提示绑信用卡，它会暂扣 $1, 不过后面会还给你）
-
-    [http://aws.amazon.com/cn/free/](http://aws.amazon.com/cn/free/)
+每个人都需要申一个 [amazon free 帐号](http://aws.amazon.com/cn/free/)（中间会提示绑信用卡，它会暂扣 $1, 不过后面会还给你）
 
 这样大家可以在一年内免费使用 5G 空间的 s3 和 一台虚拟机（EC2）
 
 ## Github 帐号
 
-每个人需要用个人邮箱申请一个 github, 方便大家提交作业
-
-	[https://github.com](https://github.com)
+每个人需要用个人邮箱申请一个 [github](https://github.com/join), 方便大家提交作业
 
 大家记得一定不要把密码、密钥等信息存到 Git 里，有不少公司搞过这样的乌龙：
 
-	[http://www.pchome.com/content-57951.html](http://www.pchome.com/content-57951.html)
+[10000名用户误上传AWS关键密码到GitHub公共区域](http://www.pchome.com/content-57951.html)
+
+我听小小道消息说 JD 的同学就把内部密码传到过 GitHub. HOHO
 
 有时间的同学可以多看一下 [Try Git](http://www.codeschool.com/courses/try-git)
 
 ## Heroku 帐号
 
-Heroku 是一个 SAAS 平台，你只要执行 
+[Heroku](https://www.heroku.com) 是一个 SAAS 平台，你只要执行 
 
 	git push heroku master 
 
@@ -157,9 +153,9 @@ Heroku 是一个 SAAS 平台，你只要执行
 
 它的服务是收费的，但是它会给你一定数目的免费项目
 
-每个人需要用个人邮箱申请一个 heroku	
+每个人需要用个人邮箱申请一个 [heroku](https://id.heroku.com/signup)
 
-[http://heroku.com](http://heroku.com)
+
 
 # 部署配置相关
 
