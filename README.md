@@ -193,16 +193,12 @@ Good Luck!
 
 	heroku open
 
-* Database initialization
+# Remarks
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Rails 运行环境相关部分我参考了很多 [Rails101] (http://rails-101.logdown.com/)，谢谢 [Xdite](http://blog.xdite.net/)
+2. [RubyChina Wiki](https://ruby-china.org/wiki) 也为我提供了很多帮助
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
