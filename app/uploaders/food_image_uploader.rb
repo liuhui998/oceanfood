@@ -59,5 +59,19 @@ class FoodImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
+  
+  def filename
+    "#{secure_token}.#{file.extension}" if original_filename.present?
+  end
+  
+  def original_file
+    original_filename
+  end
+  
+  def secure_token
+    var = :"@#{mounted_as}_secure_token"
+    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
+  end
+  
 end
